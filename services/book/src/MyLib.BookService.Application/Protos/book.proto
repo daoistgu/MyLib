@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MyLib.BookService.Grpc";
+
+package BookApi;
+service BookManagementGrpc {
+	rpc GetBook(GetBookGrpcRequest) returns (GetBookGrpcResponse);
+}
+message GetBookGrpcRequest{
+	string id = 1;
+}
+message GetBookGrpcResponse{
+	string name = 1;
+	string title = 2;
+}

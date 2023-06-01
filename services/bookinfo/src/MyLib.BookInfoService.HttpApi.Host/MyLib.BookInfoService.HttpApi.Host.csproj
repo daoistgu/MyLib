@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3d805624-362f-4eaa-98c6-3113b186ad81</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.53.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+	<PackageReference Include="Google.Protobuf" Version="3.23.2" />
+	<PackageReference Include="Grpc.Core" Version="2.46.6" />
+	<PackageReference Include="Grpc.Tools" Version="2.54.0">
+		<PrivateAssets>all</PrivateAssets>
+		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyLib.BookInfoService.Application.Contracts\MyLib.BookInfoService.Application.Contracts.csproj" />
+    <ProjectReference Include="..\MyLib.BookInfoService.Application\MyLib.BookInfoService.Application.csproj" />
+    <ProjectReference Include="..\MyLib.BookInfoService.Common\MyLib.BookInfoService.Common.csproj" />
+    <ProjectReference Include="..\MyLib.BookInfoService.EntityFrameworkCore\MyLib.BookInfoService.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+	
+</Project>
