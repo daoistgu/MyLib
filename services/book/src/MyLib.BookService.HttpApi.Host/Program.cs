@@ -18,6 +18,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+Console.WriteLine("test git");
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
