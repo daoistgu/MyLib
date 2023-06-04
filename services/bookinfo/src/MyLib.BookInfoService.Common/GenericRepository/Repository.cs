@@ -41,6 +41,7 @@ public class Repository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntit
     public async Task<TEntity> InsertAsync(TEntity entity)
     {
         var entry = await _dbContext.Set<TEntity>().AddAsync(entity);
+        await _dbContext.SaveChangesAsync();
         return entry.Entity;
     }
 
